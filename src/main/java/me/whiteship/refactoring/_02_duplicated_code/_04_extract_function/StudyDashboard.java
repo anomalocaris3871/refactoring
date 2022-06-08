@@ -20,8 +20,8 @@ public class StudyDashboard {
         Set<String> participants = new HashSet<>();
         issue.getComments().forEach(c -> participants.add(c.getUserName()));
 
-        // Print participants
         participants.forEach(System.out::println);
+        // Print participants
     }
 
     private void printReviewers() throws IOException {
