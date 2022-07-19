@@ -6,6 +6,7 @@ import java.util.List;
 public class ProductionPlan {
 
     private double production;
+
     private List<Double> adjustments = new ArrayList<>();
 
     public void applyAdjustment(double adjustment) {
@@ -14,6 +15,8 @@ public class ProductionPlan {
     }
 
     public double getProduction() {
-        return this.production;
+        //return this.adjustments.stream().reduce(0.0, Double::sum);
+        return this.adjustments.stream().mapToDouble(Double::valueOf).sum();
     }
+
 }
